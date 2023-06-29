@@ -1,14 +1,18 @@
 .firstscreen {
+
   background: url(../img/firstscreen.jpeg), lightgray 50% / cover no-repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
   color: $white;
+  max-height:892px;
+  background-size: cover;
+
   .header {
     height: 80px;
-    margin-bottom: 222px;
     img {
       display: block;
-      width: 175px;
       height: 40.561px;
-      flex-shrink: 0;
+      text-align: left;
     }
   }
   a {
@@ -21,15 +25,28 @@
   .menu {
     gap: 15px;
     display: flex;
-    width: 157px;
+    width: 125px;
     height: 15px;
     flex-shrink: 0;
     justify-content: flex-end;
   }
   .group_2 {
     flex-direction: column;
+    align-items: center;
+    @media screen and (min-width:$tablet)
+      {
+      margin-top: 222px;
+      padding-bottom: 302px;
+      gap: 30px;
+    }
+    @media (min-width: $phone) and (max-width: $tablet) {
+      margin-top: 160px;
+      padding-bottom: 240px;
+      gap: 0px;
+    }
+    
     .lead {
-      margin: 30px auto;
+      margin: 0px auto;
       p {
         font-size: 21px;
         text-align: center;
@@ -39,21 +56,25 @@
   .row.buttons {
     justify-content: center;
     gap: 30px;
-    button{
+    button {
       width: 175px;
       height: 55px;
       text-transform: uppercase;
       font-size: 14px;
-      border:0;
-      &:nth-child(1){
+      border: 0;
+      border-radius: 4px;
+      padding: 20px;
+      &:nth-child(1) {
         background-color: $white;
         color: $gray;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         background-color: $marine;
         color: $white;
       }
     }
   }
+  .mouse {
+    height: 50px;
+  }
 }
-

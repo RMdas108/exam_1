@@ -1,0 +1,83 @@
+.pricing {
+  .container {
+    background-color: $marine;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 715px;
+    .row {
+      flex-direction: column;
+      h2 {
+        color: $white;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 21px;
+        text-align: center;
+        margin-bottom: 61px;
+      }
+    }
+    .offers {
+      flex-direction: row;
+      gap: 30px;
+      p{
+        margin:0;
+      }
+      .offer {
+        display:inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+       
+        width:100%;
+        max-width:380px;
+        
+
+        .name {
+          background-color: $black;
+          font-size: 14px;
+        padding: 20px 20px 21px 17px;
+        width: inherit;
+        border-radius: 10px 10px 0px 0px;
+    }
+        .cost{
+            background: #332F30;
+            width: inherit;
+
+         
+            span:nth-child(1){
+                font-size:35px;
+                font-weight: 700;
+              }
+              span:nth-child(2){
+                
+                color:$gray;
+              }
+            }
+              .desc{
+                font-size: 17px;
+                font-family: $font_r;
+                line-height: 22px;
+                background-color: $white;
+                color:$gray;
+                width: inherit;
+
+              }
+              .how_projects, .how_storage,.other{
+                font-size: 17px;
+                font-family: $font_r;
+                font-weight: 700;
+                line-height: 22px;
+                color:$black;
+                background-color: $white;
+                width: inherit;
+              }
+            
+        }
+
+
+        }
+    }
+    }
+
+
