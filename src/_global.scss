@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+font-family:$font_m;
+
+.container{
+width:100%;
+padding-left:120px;
+padding-right:120px;
+
+.row{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+}
+h1{
+    color: $white;
+font-size: 55px;
+font-weight: 800;
+text-align: center;
+}
+}

@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Raleway:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+body .container {
+  width: 100%;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+body .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body h1 {
+  color: #fff;
+  font-size: 55px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.firstscreen {
+  background: url(../img/firstscreen.jpeg), lightgray 50%/cover no-repeat;
+  color: #fff;
+}
+.firstscreen .header {
+  height: 80px;
+  margin-bottom: 222px;
+}
+.firstscreen .header img {
+  display: block;
+  width: 175px;
+  height: 40.561px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.firstscreen a {
+  color: #fff;
+  text-align: right;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+}
+.firstscreen .menu {
+  gap: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 157px;
+  height: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.firstscreen .group_2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.firstscreen .group_2 .lead {
+  margin: 30px auto;
+}
+.firstscreen .group_2 .lead p {
+  font-size: 21px;
+  text-align: center;
+}
+.firstscreen .row.buttons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+}
+.firstscreen .row.buttons button {
+  width: 175px;
+  height: 55px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 0;
+}
+.firstscreen .row.buttons button:nth-child(1) {
+  background-color: #fff;
+  color: #929496;
+}
+.firstscreen .row.buttons button:nth-child(2) {
+  background-color: #70CBCE;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
