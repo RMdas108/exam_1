@@ -8,14 +8,36 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  color: #fff;
 }
 body h1,
-body h2,
-body p {
-  color: #fff;
+body h2 {
+  font-weight: 800;
+  text-align: center;
+}
+body h1 {
+  font-size: 55px;
+  line-height: 57px;
 }
 body h2 {
   font-size: 40px;
+}
+@media (max-width: 414px) {
+  body h2 {
+    font-size: 11.6vw;
+  }
+}
+body h3 {
+  color: #231F20;
+  font-size: 17px;
+}
+body h1 + p,
+body h2 + p {
+  color: #fff;
+  font-size: 21px;
+  text-align: center;
+}
+body h2 {
   margin-top: 77px;
 }
 body .row {
@@ -31,8 +53,8 @@ body .row {
 }
 @media (max-width: 768px) and (min-width: 414px) {
   body .container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 @media (max-width: 414px) {
@@ -51,12 +73,6 @@ body .container .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-body h1 {
-  text-align: center;
-  line-height: 57px;
-  font-size: 55px;
-  font-weight: 800;
 }
 @media (min-width: 414px) and (max-width: 768px) {
   body .firstscreen .header {
@@ -81,12 +97,6 @@ body h1 {
   body .firstscreen .header img {
     height: 24px;
   }
-  body h1 {
-    margin-bottom: 75px;
-  }
-  body .firstscreen .row .lead {
-    margin-bottom: 73px;
-  }
   body .firstscreen .row.buttons {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -95,7 +105,8 @@ body h1 {
   body .firstscreen .row.buttons button {
     width: 237px;
   }
-  body .mouse, body .iphone {
+  body .mouse,
+  body .iphone {
     display: none;
   }
 }
@@ -107,6 +118,12 @@ body h1 {
   color: #fff;
   max-height: 892px;
   background-size: cover;
+}
+@media (max-width: 768px) {
+  .firstscreen .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 .firstscreen .header {
   height: 80px;
@@ -159,12 +176,10 @@ body h1 {
     gap: 0px;
   }
 }
-.firstscreen .group_2 .lead {
-  margin: 0px auto;
-}
-.firstscreen .group_2 .lead p {
-  font-size: 21px;
-  text-align: center;
+@media (max-width: 414px) {
+  .firstscreen .group_2 {
+    gap: 74px;
+  }
 }
 .firstscreen .row.buttons {
   -webkit-box-pack: center;
@@ -207,7 +222,6 @@ body h1 {
           flex-direction: column;
 }
 .apps .container.violet .row h2 {
-  color: #fff;
   margin-bottom: 30px;
 }
 .apps .container.violet .row p {
@@ -237,7 +251,6 @@ body h1 {
   padding-bottom: 61px;
 }
 .apps .container.white .row.blocks h3 {
-  font-size: 17px;
   margin: 15px 0;
 }
 .apps .container.white .row.blocks p {
@@ -319,6 +332,9 @@ body h1 {
           flex-direction: row;
   gap: 30px;
   padding-bottom: 200px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 @media (max-width: 768px) {
   .pricing .container .offers {
@@ -355,12 +371,14 @@ body h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 10px 10px 0px 0px;
+  overflow: auto;
   width: 100%;
   max-width: 380px;
 }
 @media (max-width: 768px) {
   .pricing .container .offers .offer {
-    padding: 0 calc(15% - 24px);
+    padding: 0;
     max-width: initial;
   }
 }
@@ -375,13 +393,11 @@ body h1 {
   padding: 15px;
   height: 48px;
   width: inherit;
-  border-radius: 10px 10px 0px 0px;
 }
 .pricing .container .offers .offer .cost {
   background: #332f30;
   width: inherit;
   height: 48px;
-  padding: 2px 0;
 }
 .pricing .container .offers .offer .cost span:nth-child(1) {
   font-size: 35px;
@@ -409,7 +425,7 @@ body h1 {
   color: #231F20;
   background-color: #fff;
   width: inherit;
-  height: 44px;
+  min-height: 44px;
   border-bottom: 1px dashed #e8eaea;
   padding: 11px;
 }

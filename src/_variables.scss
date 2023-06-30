@@ -5,7 +5,10 @@ $black: #231F20;
 $font_m:'Montserrat', sans-serif;
 $font_r:'Raleway',sans-serif;
 // Розміри екранів
-$desctop:1440px;
+$desktop:1440px;
 $tablet:768px;
 $phone:414px;
-$initial_x_padding:120px;
+// Відступи по х
+$init_padding_desktop:120px;
+$init_padding_tablet: 147px;
+$init_padding_phone: 24px;
