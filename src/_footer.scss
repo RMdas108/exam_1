@@ -1,0 +1,28 @@
+section.footer{
+    color:$gray;
+    height:$height_footer;
+    .container{
+        height: inherit;  
+    }
+    .row{
+        height: inherit;
+        .copyright{
+         font-size: 21px;  
+         text-align: center;
+         
+        }
+        .social{
+          display:flex;
+          gap:20px;
+        flex-direction: row; 
+        transition:0.2s ease-in-out;
+        & img:hover{
+            filter: brightness(1.5) contrast(1.9) grayscale(0.03) hue-rotate(262deg) invert(1);
+        } 
+        }
+        @media (max-width: $tablet) {
+            flex-direction: column;  
+            justify-content: center;
+        }
+    }
+}

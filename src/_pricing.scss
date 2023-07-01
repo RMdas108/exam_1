@@ -1,27 +1,28 @@
-.pricing {
+section.pricing {
   .container {
     background-color: $marine;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+   
     .row {
       flex-direction: column;
       h2 {
+        margin-top:77px;
         color: $white;
-        margin-bottom: 30px;
       }
       p {
         font-size: 21px;
         text-align: center;
-        margin-bottom: 61px;
+        margin-bottom:61px;
+        @media(max-width:$phone){
+          margin-bottom:83px;
+        }
       }
     }
     .offers {
       flex-direction: row;
       gap: 30px;
       padding-bottom:200px;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      
      
       @media (max-width: $tablet) {
         flex-direction: column;
@@ -41,6 +42,7 @@
         flex-direction: column;
         border-radius: 10px 10px 0px 0px;
         overflow: auto;
+        transition: 0.2s ease-in-out;
 
         width: 100%;
         max-width: 380px;
@@ -51,6 +53,8 @@
         @media (max-width: $phone) {
           padding: 0;
         }
+        
+        
         .name {
           background-color: $black;
           font-size: 14px;
@@ -105,8 +109,15 @@
           height: 52px;
           font-family: $font_r;
           font-weight: 700;
+          padding: 10px;
+    border-radius: 0;
         }
       }
     }
   }
+}
+.offer:hover{
+    transform: scale(1.18);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
 }
