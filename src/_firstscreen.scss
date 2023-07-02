@@ -1,21 +1,6 @@
-section.firstscreen {
-  
-  background: url(../img/firstscreen.jpeg), lightgray 50% / cover no-repeat;
-  background-position: top center;
-  background-repeat: no-repeat;
-  color: $white;
+.firstscreen {
+  @include bg_inmage('../img/firstscreen.jpeg');
   height:892px;
-  background-size: cover;
-  .container{
-    height:inherit;
-  }
-  @media (max-width: $tablet) {
-    .container {padding: {
-      left: $init_padding_phone;
-      right: $init_padding_phone;
-    }
-  }
-  }
   .header {
     height: 80px;
     margin-bottom: -90px;
@@ -44,11 +29,7 @@ section.firstscreen {
     align-items: center;
     height: inherit;
     justify-content: center;
-    @media screen and (min-width:$tablet)
-      {
-      
-      gap: 30px;
-    }
+    gap: 30px;
     @media (max-width: $tablet) {
       
       gap: 0px;

@@ -1,9 +1,10 @@
 section.subscribe {
-  height: 819px;
-
+  height: $init_height_subscribe;
+  @media (max-width: $phone) {
+    height:721px;
+  }
   .container {
-    background-color: $silver;
-    height: inherit;
+    @include bg_color($silver);
     .row {
       flex-direction: column;
       height: inherit;
@@ -29,10 +30,7 @@ section.subscribe {
 
     }
   }
-  @media (max-width: $phone) {
-    height:721px;
-
-  }
+ 
 }
 @media (max-width: $phone){
   .envelope{

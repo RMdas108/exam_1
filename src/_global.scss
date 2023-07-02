@@ -5,7 +5,16 @@
 }
 body {
   font-family: $font_m;
-  color: $white;
+  color: $white;  
+  .container {
+    height:inherit;
+    @include container_padding_x; 
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
   h1,
   h2 {
     font-weight: 800;
@@ -14,11 +23,15 @@ body {
   h1 {
     font-size: 55px;
     line-height: 57px;
+    margin-bottom: 46px;
+    @media(max-width:$phone){
+        line-height: 65px;
+      }
+    }
   }
   h2 {
     font-size: 40px;
     @media (max-width: $phone){
-
     font-size: 11.6vw;
   }
 }
@@ -32,9 +45,6 @@ body {
     font-size: 21px;
     text-align: center;
   }
-  // h2 {
-  //   margin-top: 77px;
-  // }
   .row {
     display: flex;
     gap:30px;
@@ -82,15 +92,11 @@ body {
     font-family: $font_m;
     @media (max-width: $tablet) {
       max-width:474px;
-      
-  
   }
   @media (max-width: $phone) {
     max-width:364px;
     width:100%;
-   
   }
-
   &::placeholder{
     font-size: 21px;
     font-family: $font_m;
@@ -100,51 +106,17 @@ body {
   border:1px solid $silver;
   outline: none;
 }}
-  .container {
-    @media screen and (min-width: $tablet) {
-      padding: {
-        left: $init_padding_desktop;
-        right: $init_padding_desktop;
-      }
-    }
-    @media (max-width: $tablet) and (min-width: $phone){
-      padding: {
-        left: 15%;
-        right: 15%;
-      }
-    }
-    @media (max-width: $phone) {
-      padding: {
-        left: $init_padding_phone;
-        right: $init_padding_phone;
-      }
-    }
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
   @media (max-width: $tablet) {
     section.firstscreen .header {
       height: 92px;
       img {
         height: 24px;
       }
-    }
-
-    h1 {
-      margin-bottom: 46px;
-      @media(max-width:$phone){
-        line-height: 65px;
-      }
-    }
-    
+    }    
     .buttons {
       margin-top: 30px;
       margin-bottom: 44px;
     }
-
   }
   @media (max-width: $phone) {
     .firstscreen .header {
@@ -154,7 +126,6 @@ body {
         height: 24px;
       }
     }
-
     .firstscreen .row.buttons {
       flex-wrap: wrap;
       
@@ -167,8 +138,6 @@ body {
       display: none;
     }
   }
-}
- 
   @media(max-width:$phone){
     h1 + p{margin-bottom: 31px;}
     .subscribe input[type=button], .firstscreen input[type=button]{width:237px;}

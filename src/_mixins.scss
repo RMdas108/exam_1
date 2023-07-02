@@ -1,0 +1,24 @@
+@mixin bg_image($link){
+    background: url($link), lightgray 50% / cover no-repeat;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin bg_color($color){
+    background-color: $color;
+    height: inherit;
+}
+@mixin container_padding_x {
+@media (max-width: $tablet) {
+    padding: {
+      left: $init_padding_desktop;
+      right: $init_padding_desktop;
+    }
+  }
+  @media (max-width: $phone) {
+    padding: {
+      left: $init_padding_phone;
+      right: $init_padding_phone;
+    }
+  }
+}

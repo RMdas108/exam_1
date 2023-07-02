@@ -1,9 +1,6 @@
 section.apps {
   .container.violet {
-    background: url(../img/bg.jpeg), lightgray 50% / cover no-repeat;
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include bg_image('../img/bg.jpeg');
     height: 715px;
     position:relative;
     .row {

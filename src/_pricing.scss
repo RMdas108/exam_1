@@ -1,6 +1,6 @@
 section.pricing {
   .container {
-    background-color: $marine;
+    @include bg_color($marine); 
    
     .row {
       flex-direction: column;
