@@ -1,4 +1,4 @@
-section.apps {
+.apps {
   .container.violet {
     @include bg_image('../img/bg.jpeg');
     height: 715px;
@@ -16,6 +16,7 @@ section.apps {
     }
     .iphone{
     height:742px;
+    @media (max-width: $phone){display: none;}
     
     img{
       margin: 0 auto;
@@ -25,12 +26,9 @@ section.apps {
     object-fit: scale-down;
     }
   }
-  
   }
   .container.white {
     display: flex;
-   
-
     .row.blocks {
       flex-direction: row;
       justify-content: space-between;
@@ -38,8 +36,11 @@ section.apps {
       align-self: start;
       gap: 30px;
       padding-top:400px;
-      padding-bottom: 61px;
-
+      padding-bottom:200px;
+      @media (max-width: $tablet){
+        padding-bottom:98px;}
+        @media (max-width: $phone) {
+          padding-bottom:61px;}
       h3 {
         margin: 15px 0;
       }

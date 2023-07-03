@@ -1,7 +1,7 @@
 section.footer{
     @include bg_color($white); 
     color:$gray;
-    height:$height_footer;
+    height:$init_height_footer;
     .row{
         height: inherit;
         .copyright{

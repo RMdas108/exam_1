@@ -10,142 +10,15 @@ body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
-body h1,
-body h2 {
-  font-weight: 800;
-  text-align: center;
-}
-body h1 {
-  font-size: 55px;
-  line-height: 57px;
-}
-body h2 {
-  font-size: 40px;
-}
-@media (max-width: 414px) {
-  body h2 {
-    font-size: 11.6vw;
-  }
-}
-body h3 {
-  color: #231F20;
-  font-size: 17px;
-}
-body h1 + p,
-body h2 + p {
-  color: #fff;
-  font-size: 21px;
-  text-align: center;
-}
-body .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-body button, body input[type=button] {
-  width: 175px;
-  height: 55px;
-  text-transform: uppercase;
-  font-size: 14px;
-  border: 0;
-  border-radius: 4px;
-  padding: 20px;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-}
-body button.learn_more, body input[type=button].learn_more {
-  background-color: #fff;
-  color: #929496;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-body button.learn_more:hover, body input[type=button].learn_more:hover {
-  font-weight: 800;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-body button.request_invite, body input[type=button].request_invite {
-  background-color: #70CBCE;
-  color: #fff;
-  -webkit-transition: 0.2s ease-in-out;
-  transition: 0.2s ease-in-out;
-}
-body button.request_invite:hover, body input[type=button].request_invite:hover {
-  font-weight: 800;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-body form {
-  width: 100%;
-}
-body input[type=email] {
-  width: 380px;
-  border-radius: 3px;
-  border: 0;
-  height: 55px;
-  padding-left: 35px;
-  font-size: 21px;
-  font-family: "Montserrat", sans-serif;
+body .container {
+  height: inherit;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 @media (max-width: 768px) {
-  body input[type=email] {
-    max-width: 474px;
-  }
-}
-@media (max-width: 414px) {
-  body input[type=email] {
-    max-width: 364px;
-    width: 100%;
-  }
-}
-body input[type=email]::-webkit-input-placeholder {
-  font-size: 21px;
-  font-family: "Montserrat", sans-serif;
-  color: #929496;
-}
-body input[type=email]::-moz-placeholder {
-  font-size: 21px;
-  font-family: "Montserrat", sans-serif;
-  color: #929496;
-}
-body input[type=email]:-ms-input-placeholder {
-  font-size: 21px;
-  font-family: "Montserrat", sans-serif;
-  color: #929496;
-}
-body input[type=email]::-ms-input-placeholder {
-  font-size: 21px;
-  font-family: "Montserrat", sans-serif;
-  color: #929496;
-}
-body input[type=email]::placeholder {
-  font-size: 21px;
-  font-family: "Montserrat", sans-serif;
-  color: #929496;
-}
-body input[type=email]:focus {
-  border: 1px solid #F2F2F2;
-  outline: none;
-}
-@media screen and (min-width: 768px) {
   body .container {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-}
-@media (max-width: 768px) and (min-width: 414px) {
-  body .container {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 @media (max-width: 414px) {
@@ -164,92 +37,197 @@ body .container .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+body h1,
+body h2 {
+  font-weight: 800;
+  text-align: center;
+}
+body h1 {
+  font-size: 55px;
+  line-height: 55px;
 }
 @media (max-width: 768px) {
-  body section.firstscreen .header {
-    height: 92px;
-  }
-  body section.firstscreen .header img {
-    height: 24px;
-  }
-  body h1 {
-    margin-bottom: 46px;
-  }
-}
-@media (max-width: 768px) and (max-width: 414px) {
   body h1 {
     line-height: 65px;
   }
 }
-@media (max-width: 768px) {
-  body .buttons {
-    margin-top: 30px;
-    margin-bottom: 44px;
-  }
+
+h2 {
+  font-size: 40px;
+  color: #fff;
 }
 @media (max-width: 414px) {
-  body .firstscreen .header {
-    height: 92px;
-    margin-bottom: 55px;
-  }
-  body .firstscreen .header img {
-    height: 24px;
-  }
-  body .firstscreen .row.buttons {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  body .firstscreen .row.buttons button {
-    width: 237px;
-  }
-  body .mouse,
-  body .iphone {
-    display: none;
+  h2 {
+    font-size: 11.6vw;
   }
 }
 
-@media (max-width: 414px) {
-  h1 + p {
-    margin-bottom: 31px;
+h3 {
+  color: #231F20;
+  font-size: 17px;
+}
+
+h1 + p,
+h2 + p {
+  color: #fff;
+  font-size: 21px;
+  text-align: center;
+}
+
+input[type=button] {
+  width: 175px;
+  height: 55px;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 0;
+  border-radius: 4px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+@media (max-width: 768px) {
+  input[type=button] {
+    width: 227px;
   }
-  .subscribe input[type=button], .firstscreen input[type=button] {
+}
+@media (max-width: 414px) {
+  input[type=button] {
     width: 237px;
   }
 }
-section.firstscreen {
-  background: url(../img/firstscreen.jpeg), lightgray 50%/cover no-repeat;
-  background-position: top center;
-  background-repeat: no-repeat;
-  color: #fff;
-  height: 892px;
-  background-size: cover;
+input[type=button].learn_more {
+  background-color: #fff;
+  color: #929496;
 }
-section.firstscreen .container {
-  height: inherit;
+input[type=button].request_invite {
+  background-color: #70CBCE;
+  color: #fff;
+}
+input[type=button]:hover {
+  font-weight: 800;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+form {
+  width: 100%;
+}
+
+input[type=email] {
+  width: 380px;
+  border-radius: 3px;
+  border: 0;
+  height: 55px;
+  padding-left: 35px;
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 768px) {
-  section.firstscreen .container {
-    padding-left: 24px;
-    padding-right: 24px;
+  input[type=email] {
+    max-width: 474px;
   }
 }
-section.firstscreen .header {
+@media (max-width: 414px) {
+  input[type=email] {
+    max-width: 364px;
+    width: 100%;
+  }
+}
+input[type=email]::-webkit-input-placeholder {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #929496;
+}
+input[type=email]::-moz-placeholder {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #929496;
+}
+input[type=email]:-ms-input-placeholder {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #929496;
+}
+input[type=email]::-ms-input-placeholder {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #929496;
+}
+input[type=email]::placeholder {
+  font-size: 21px;
+  font-family: "Montserrat", sans-serif;
+  color: #929496;
+}
+input[type=email]:focus {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+          box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  section.firstscreen .header {
+    height: 92px;
+  }
+  section.firstscreen .header img {
+    height: 24px;
+  }
+  .firstscreen .row.buttons {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 414px) {
+  .firstscreen .header {
+    height: 92px;
+    margin-bottom: 55px;
+  }
+  .firstscreen .header img {
+    height: 24px;
+  }
+  .firstscreen .row.buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.firstscreen {
+  background: url("../img/firstscreen.jpeg"), lightgray 50%/cover no-repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 892px;
+}
+.firstscreen .header {
   height: 80px;
   margin-bottom: -90px;
 }
-section.firstscreen .header img {
+.firstscreen .header img {
   display: block;
   height: 40px;
   text-align: left;
 }
-section.firstscreen a {
+.firstscreen .header a {
   color: #fff;
   text-align: right;
   font-size: 14px;
   font-family: "Raleway", sans-serif;
   text-decoration: none;
 }
-section.firstscreen .menu {
+.firstscreen .header .menu {
   gap: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,65 +239,71 @@ section.firstscreen .menu {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-section.firstscreen .group_2 {
+.firstscreen .row.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: inherit;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  section.firstscreen .group_2 {
-    gap: 30px;
-  }
+  gap: 30px;
+  margin-top: 10px;
 }
 @media (max-width: 768px) {
-  section.firstscreen .group_2 {
-    gap: 0px;
+  .firstscreen .row.group {
+    margin-top: 0px;
   }
 }
-section.firstscreen .row.buttons {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 30px;
-}
-section.firstscreen .mouse {
+.firstscreen .row.group .mouse {
   height: 50px;
 }
+@media (max-width: 414px) {
+  .firstscreen .row.group .mouse {
+    display: none;
+  }
+}
+@media (max-width: 414px) {
+  .firstscreen .row.group h1 + p {
+    margin-bottom: 31px;
+  }
+}
 
-section.apps .container.violet {
-  background: url(../img/bg.jpeg), lightgray 50%/cover no-repeat;
-  background-position: bottom center;
+.apps .container.violet {
+  background: url("../img/bg.jpeg"), lightgray 50%/cover no-repeat;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 715px;
   position: relative;
 }
-section.apps .container.violet .row {
+.apps .container.violet .row {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
-section.apps .container.violet .row h2 {
+.apps .container.violet .row h2 {
   margin-top: 77px;
 }
-section.apps .container.violet .row p {
+.apps .container.violet .row p {
   font-size: 21px;
   text-align: center;
   margin-bottom: 37px;
 }
-section.apps .container.violet .iphone {
+.apps .container.violet .iphone {
   height: 742px;
 }
-section.apps .container.violet .iphone img {
+@media (max-width: 414px) {
+  .apps .container.violet .iphone {
+    display: none;
+  }
+}
+.apps .container.violet .iphone img {
   margin: 0 auto;
   display: block;
   height: 742px;
@@ -327,12 +311,12 @@ section.apps .container.violet .iphone img {
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
-section.apps .container.white {
+.apps .container.white {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-section.apps .container.white .row.blocks {
+.apps .container.white .row.blocks {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -346,12 +330,22 @@ section.apps .container.white .row.blocks {
       align-self: start;
   gap: 30px;
   padding-top: 400px;
-  padding-bottom: 61px;
+  padding-bottom: 200px;
 }
-section.apps .container.white .row.blocks h3 {
+@media (max-width: 768px) {
+  .apps .container.white .row.blocks {
+    padding-bottom: 98px;
+  }
+}
+@media (max-width: 414px) {
+  .apps .container.white .row.blocks {
+    padding-bottom: 61px;
+  }
+}
+.apps .container.white .row.blocks h3 {
   margin: 15px 0;
 }
-section.apps .container.white .row.blocks p {
+.apps .container.white .row.blocks p {
   color: #929496;
   font-size: 17px;
   font-family: "Raleway", sans-serif;
@@ -404,6 +398,7 @@ section.apps .container.white .row.blocks p {
 
 section.pricing .container {
   background-color: #70CBCE;
+  height: inherit;
 }
 section.pricing .container .row {
   -webkit-box-orient: vertical;
@@ -413,7 +408,6 @@ section.pricing .container .row {
 }
 section.pricing .container .row h2 {
   margin-top: 77px;
-  color: #fff;
 }
 section.pricing .container .row p {
   font-size: 21px;
@@ -426,15 +420,21 @@ section.pricing .container .row p {
   }
 }
 section.pricing .container .offers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 30px;
   padding-bottom: 200px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 @media (max-width: 768px) {
   section.pricing .container .offers {
@@ -447,10 +447,6 @@ section.pricing .container .offers {
 }
 @media (max-width: 414px) {
   section.pricing .container .offers {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     padding-bottom: 86px;
   }
 }
@@ -555,6 +551,11 @@ section.pricing .container .offers .offer button {
 section.subscribe {
   height: 819px;
 }
+@media (max-width: 414px) {
+  section.subscribe {
+    height: 721px;
+  }
+}
 section.subscribe .container {
   background-color: #F2F2F2;
   height: inherit;
@@ -591,11 +592,6 @@ section.subscribe .container .form_subscribe {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 414px) {
-  section.subscribe {
-    height: 721px;
-  }
-}
 
 @media (max-width: 414px) {
   .envelope {
@@ -610,11 +606,10 @@ section.subscribe .container .form_subscribe {
   }
 }
 section.footer {
+  background-color: #fff;
+  height: inherit;
   color: #929496;
   height: 271px;
-}
-section.footer .container {
-  height: inherit;
 }
 section.footer .row {
   height: inherit;

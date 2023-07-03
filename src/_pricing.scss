@@ -6,7 +6,7 @@ section.pricing {
       flex-direction: column;
       h2 {
         margin-top:77px;
-        color: $white;
+        
       }
       p {
         font-size: 21px;
@@ -18,18 +18,15 @@ section.pricing {
       }
     }
     .offers {
-      flex-direction: row;
-      gap: 30px;
+      @include flex_row;
       padding-bottom:200px;
-      justify-content: space-between;
-      
-     
+  
       @media (max-width: $tablet) {
         flex-direction: column;
         padding-bottom:108px;
       }
       @media (max-width: $phone) {
-        flex-direction: column;
+
         padding-bottom:86px;
       }
       p {

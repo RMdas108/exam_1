@@ -1,5 +1,5 @@
 .firstscreen {
-  @include bg_inmage('../img/firstscreen.jpeg');
+  @include bg_image('../img/firstscreen.jpeg');
   height:892px;
   .header {
     height: 80px;
@@ -9,7 +9,7 @@
       height: 40px;
       text-align: left;
     }
-  }
+  
   a {
     color: $white;
     text-align: right;
@@ -23,24 +23,19 @@
     height: 15px;
     flex-shrink: 0;
     justify-content: flex-end;
-  }
-  .group_2 {
-    flex-direction: column;
-    align-items: center;
-    height: inherit;
-    justify-content: center;
-    gap: 30px;
+  }}
+  .row.group {
+    @include flex_column;
+    margin-top:10px;
+
     @media (max-width: $tablet) {
-      
-      gap: 0px;
+      margin-top:0px;
     }
-  }
-  .row.buttons {
-    justify-content: center;
-    gap: 30px;
-    
-  }
   .mouse {
     height: 50px;
+    @media (max-width: $phone) {display: none;}
   }
-}
+  @media(max-width:$phone){
+    h1 + p{margin-bottom: 31px;}
+    
+}  }}

@@ -7,12 +7,17 @@
 @mixin bg_color($color){
     background-color: $color;
     height: inherit;
+    
 }
 @mixin container_padding_x {
-@media (max-width: $tablet) {
-    padding: {
+padding: {
       left: $init_padding_desktop;
       right: $init_padding_desktop;
+    }
+  @media (max-width: $tablet) {
+    padding: {
+      left: $init_padding_phone;
+      right: $init_padding_phone;
     }
   }
   @media (max-width: $phone) {
@@ -21,4 +26,18 @@
       right: $init_padding_phone;
     }
   }
+}
+@mixin flex_row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap:30px;
+      flex-direction: row;
+}
+@mixin flex_column{
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+      justify-content: center;
+      gap:30px;
 }
