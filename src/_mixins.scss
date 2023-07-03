@@ -1,8 +1,10 @@
 @mixin bg_image($link){
-    background: url($link), lightgray 50% / cover no-repeat;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: {
+    image:url($link);
+    position: top center;
+    repeat: no-repeat;
+    size: cover;
+    }
 }
 @mixin bg_color($color){
     background-color: $color;
@@ -20,24 +22,24 @@ padding: {
       right: $init_padding_phone;
     }
   }
-  @media (max-width: $phone) {
-    padding: {
-      left: $init_padding_phone;
-      right: $init_padding_phone;
-    }
+}
+
+@mixin flex($dir:false){
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap:30px;
+  
+  @if $dir{
+    flex-direction: column;
+    height: inherit;
+    justify-content: center;
   }
 }
-@mixin flex_row{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap:30px;
-      flex-direction: row;
-}
-@mixin flex_column{
-      display: flex;
-      flex-direction: column;
-      height: inherit;
-      justify-content: center;
-      gap:30px;
+
+
+@mixin border_top_block($color){
+  border-top: 4px solid $color;
 }

@@ -1,45 +1,33 @@
-section.subscribe {
+.subscribe {
   height: $init_height_subscribe;
   @media (max-width: $phone) {
-    height:721px;
+    height: 721px;
   }
   .container {
     @include bg_color($silver);
     .row {
-      flex-direction: column;
-      height: inherit;
-      justify-content: center;
-      
+      @include flex($dir: true);
     }
     h2 {
       color: $black;
     }
     p {
-      font-size: 21px;
-      text-align: center;
       margin-bottom: 30px;
       color: $black;
-
+      @media (max-width: $phone) {
+        margin-bottom: 0px;
+      }
     }
-    .form_subscribe{
-        display:flex;
-        flex-direction: column;
-        gap:30px;
-        align-items: center;
-
+    .form_subscribe {
+      @include flex($dir: true);
     }
   }
- 
 }
-@media (max-width: $phone){
-  .envelope{
+@media (max-width: $phone) {
+  .envelope {
     margin-bottom: 6px;
-    img{
-      height:107px;
-      width:107px;
+    img {
+      height: 107px;
     }
-  }
-  section.subscribe .container p{
-    margin-bottom: 0px;
   }
 }

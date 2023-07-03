@@ -1,41 +1,63 @@
 .firstscreen {
-  @include bg_image('../img/firstscreen.jpeg');
-  height:892px;
+  @include bg_image("../img/firstscreen.jpeg");
+  height: 892px;
   .header {
     height: 80px;
     margin-bottom: -90px;
+    @media (max-width: $tablet) {
+      height: 92px;
+    }
+    @media (max-width: $phone) {
+      margin-bottom: -60px;
+    }
     img {
       display: block;
       height: 40px;
       text-align: left;
+      @media (max-width: $tablet) {
+        height: 24px;
+      }
     }
-  
-  a {
-    color: $white;
-    text-align: right;
-    font-size: 14px;
-    font-family: $font_r;
-    text-decoration: none;
+
+    a {
+      color: $white;
+      text-align: right;
+      font-size: 14px;
+      font-family: $font_r;
+      text-decoration: none;
+    }
+    .menu {
+      gap: 15px;
+      @include flex($dir: false);
+      height: 15px;
+      justify-content: flex-end;
+      @media (max-width: $phone) {
+        gap: 10px;
+      }
+    }
   }
-  .menu {
-    gap: 15px;
-    display: flex;
-    height: 15px;
-    flex-shrink: 0;
-    justify-content: flex-end;
-  }}
   .row.group {
-    @include flex_column;
-    margin-top:10px;
+    @include flex($dir: true);
+    margin-top: 10px;
 
     @media (max-width: $tablet) {
-      margin-top:0px;
+      margin-top: 0px;
     }
-  .mouse {
-    height: 50px;
-    @media (max-width: $phone) {display: none;}
+    .buttons {
+      @media (max-width: $tablet) {
+        width: 100%;
+        justify-content: center;
+      }
+      @media (max-width: $phone) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    .mouse {
+      height: 50px;
+      @media (max-width: $phone) {
+        display: none;
+      }
+    }
   }
-  @media(max-width:$phone){
-    h1 + p{margin-bottom: 31px;}
-    
-}  }}
+}

@@ -1,69 +1,61 @@
-section.pricing {
+.pricing {
   .container {
-    @include bg_color($marine); 
-   
+    @include bg_color($marine);
+    overflow: hidden;
     .row {
       flex-direction: column;
       h2 {
-        margin-top:77px;
-        
+        margin-top: 77px;
       }
       p {
-        font-size: 21px;
         text-align: center;
-        margin-bottom:61px;
-        @media(max-width:$phone){
-          margin-bottom:83px;
+        margin-bottom: 61px;
+        @media (max-width: $phone) {
+          margin-bottom: 83px;
         }
       }
     }
     .offers {
-      @include flex_row;
-      padding-bottom:200px;
-  
+      @include flex($dir: false);
+      padding-bottom: 200px;
       @media (max-width: $tablet) {
         flex-direction: column;
-        padding-bottom:108px;
-      }
+        padding-bottom: 108px;
+        
+            padding-left: 20%;
+            padding-right: 20%;
+        }
       @media (max-width: $phone) {
-
-        padding-bottom:86px;
+        padding-bottom: 86px;
+        padding-left: 0;
+        padding-right: 0;
       }
       p {
         margin: 0;
       }
       .offer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        @include flex($dir: true);
+        gap: 0;
         border-radius: 10px 10px 0px 0px;
         overflow: auto;
         transition: 0.2s ease-in-out;
-
         width: 100%;
         max-width: 380px;
-        @media (max-width:$tablet){
+        @media (max-width: $tablet) {
           padding: 0;
           max-width: initial;
         }
-        @media (max-width: $phone) {
-          padding: 0;
-        }
-        
-        
         .name {
           background-color: $black;
           font-size: 14px;
           padding: 15px;
-          height: 48px;
           width: inherit;
-          
         }
         .cost {
           background: #332f30;
           width: inherit;
           height: 48px;
+          border: 1px solid #231f20;
 
           span:nth-child(1) {
             font-size: 35px;
@@ -73,32 +65,30 @@ section.pricing {
             color: $gray;
           }
         }
-        .desc {
+        .how_projects,
+        .how_storage,
+        .other,.desc {
           font-size: 17px;
           font-family: $font_r;
-          line-height: 22px;
           background-color: $white;
-          color: $gray;
           width: inherit;
-          padding: 12px 20px;
           border-bottom: 1px dashed #e8eaea;
         }
         .how_projects,
         .how_storage,
         .other {
-          font-size: 17px;
-          font-family: $font_r;
           font-weight: 700;
           color: $black;
-          background-color: $white;
-          width: inherit;
           min-height: 44px;
-          border-bottom: 1px dashed #e8eaea;
           padding: 11px;
+        }
+        .desc {
+          line-height: 22px;
+          color: $gray;
+          padding: 12px 20px;
         }
         button {
           text-transform: uppercase;
-          background-color: #ededed;
           color: $marine;
           border: 0;
           width: inherit;
@@ -106,15 +96,15 @@ section.pricing {
           height: 52px;
           font-family: $font_r;
           font-weight: 700;
-          padding: 10px;
-    border-radius: 0;
+          border-radius: 0;
+          cursor: pointer;
+  
         }
       }
     }
   }
 }
-.offer:hover{
-    transform: scale(1.18);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    
+.offer:hover {
+  transform: scale(1.18);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
